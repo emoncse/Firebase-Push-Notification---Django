@@ -12,7 +12,7 @@ This project demonstrates how to integrate Firebase with Django to send push not
 
 1. **Clone the Repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/emoncse/Firebase-Push-Notification---Django.git
    cd firebase_testing
    ```
 
@@ -43,16 +43,6 @@ This project demonstrates how to integrate Firebase with Django to send push not
 
 ## Usage
 
-### Save Device Token
-- Endpoint: `/save-token/`
-- Method: `POST`
-- Payload:
-  ```json
-  {
-    "token": "your_device_token"
-  }
-  ```
-
 ### Send Notification to All Devices
 - Endpoint: `/notify/`
 - Method: `GET` or `POST`
@@ -61,20 +51,6 @@ This project demonstrates how to integrate Firebase with Django to send push not
   - `body`: Body of the notification
   - `data` (optional): Additional data payload
 
-- Example `GET` Request:
-  ```bash
-  curl -X GET "http://127.0.0.1:9000/notify/?title=Test+Notification&body=This+is+a+test+notification"
-  ```
-
-- Example `POST` Request:
-  ```bash
-  curl -X POST http://127.0.0.1:9000/notify/ \
-  -H "Content-Type: application/json" \
-  -d '{
-    "title": "Test Notification",
-    "body": "This is a test notification body."
-  }'
-  ```
 
 - Example `POST` Request with Weather Alert:
   ```bash
@@ -88,7 +64,6 @@ This project demonstrates how to integrate Firebase with Django to send push not
 
 ## Notes
 - Ensure the Firebase Admin SDK JSON file is correctly configured.
-- Use the `/save-token/` endpoint to save device tokens before sending notifications.
 - This project is for development purposes only. Do not use the development server in production.
 
 ## License
